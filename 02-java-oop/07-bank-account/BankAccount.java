@@ -3,7 +3,7 @@ public class BankAccount {
 
     public static int numAccounts = 0;
     public static double totalInAccounts = 0;
-    private static String getAccounts() {
+    public static String getAccounts() {
         String account = "";
         Random random = new Random();
         for(int i = 0; i < 10; i++){
