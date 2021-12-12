@@ -9,7 +9,7 @@ public class Iphone extends Phone implements Ringable {
     }
     @Override
     public String unlock() {
-        return "Unlocked with fingerprint scanner";
+        return "Unlocked with Face I.D.";
 
     }
     @Override
