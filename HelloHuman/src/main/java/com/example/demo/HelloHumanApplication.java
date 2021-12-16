@@ -3,11 +3,11 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
 
 
 @SpringBootApplication
-@RestController
+@Controller
 
 public class HelloHumanApplication {
 
@@ -17,7 +17,7 @@ public class HelloHumanApplication {
 	@RequestMapping("/")
 	
 	public String hello() {
-		return "Hello Human";
+		return "Index.jsp";
 	}
 	
 	@RequestMapping("/fname")
