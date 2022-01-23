@@ -27,7 +27,7 @@ public class NinjaController {
 	public String addNinja(@ModelAttribute("ninja") Ninja ninja, Model viewModel) {
 		List<Dojo> allDojos = this.aService.allDojos();
 		viewModel.addAttribute("allDojos" , allDojos);
-		return "/newNinja.jsp";
+		return "newNinja.jsp";
 	}
 	
 	@PostMapping("/createNinja")
@@ -35,7 +35,7 @@ public class NinjaController {
 		if(result.hasErrors()) {
 			List<Dojo> allDojos = this.aService.allDojos();
 			viewModel.addAttribute("allDojos" , allDojos);
-			return "/newNinja.jsp";
+			return "newNinja.jsp";
 		}
 		this.aService.createNinja(ninja);
 		return "redirect:/dojo/" + ninja.getDojo().getId();
